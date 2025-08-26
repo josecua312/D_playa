@@ -1,0 +1,689 @@
+/* =========================
+   ESTILOS GENERALES
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-image: url("imagen8.jpg");
+  background-size: contain; 
+  background-repeat: no-repeat;
+
+}
+
+.fondo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   HEADER Y NAVEGACIÓN
+========================= */
+header {
+  background-color: #e1e8e9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.logo a {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: #479dff;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #47b5ff;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #4f9cf5;
+  font-family: 'Pacifico', cursive;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero-bg.jpg') no-repeat center center/cover;
+  color: #f6f7f8;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: #f82803;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff4500;
+}
+
+/* Menú */
+.menu-section {
+  background-color: #fff;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.menu-item h3 {
+  font-size: 1.5rem;
+  color: #ff6347;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item button {
+  margin-top: 10px;
+  padding: 8px;
+  background: #ec1e0f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-item button:hover {
+  background: #340ce6;
+}
+
+/* Nosotros */
+.about-section {
+  background-color: #ffe6cc;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Contacto */
+.contact-section {
+  background-color: #fff;
+}
+
+.social-links a {
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  color: #ff6347;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff4500;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+/* =========================
+   CARRITO
+========================= */
+#cart {
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  background: #fff;
+  border: 2px solid #333;
+  padding: 15px;
+  width: 350px;
+  max-height: 500px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1000;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+#cart h3 {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cart .close-btn {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.cart-item img {
+  width: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.cart-details { flex: 1; }
+
+.cart-details h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity button {
+  padding: 2px 6px;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quantity button:hover {
+  background: #218838;
+}
+
+#cart-total {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: right;
+}
+
+.cart-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: #ff9800;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.cart-btn:hover {
+  background: #e68900;
+}
+
+/* Botón flotante carrito */
+#cart-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1ce6d5;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   MENSAJES TOAST
+========================= */
+.toast {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #3bb7dd;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 2000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   MAPA
+========================= */
+.map {
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+/* =========================
+   MODAL USUARIO
+========================= */
+.modal {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  display: flex; justify-content: center; align-items: center;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+}
+.hidden { display: none; }
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+.form input {
+  display: block;
+  width: 90%;
+  margin: 8px auto;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+
+
+/* =========================
+   PERFIL
+========================= */
+#profile-icon {
+  position: fixed;
+  top: 20px; right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 1200;
+}
+
+#profile-container {
+  position: fixed;
+  top: 70px; right: 20px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1200;
+}
+#profile-container button {
+  background: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  nav { flex-direction: column; padding: 1rem; }
+  nav ul { margin-top: 1rem; gap: 1rem; }
+  .hero-content h1 { font-size: 3rem; }
+  .hero-content p { font-size: 1.2rem; }
+  .menu-grid { grid-template-columns: 1fr; }
+}
+
+/* Estilo general para los botones del modal usuario */
+#user-modal .form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #ff7b00, #ffcc00);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Hover efecto brillante */
+#user-modal .form button:hover {
+  background: linear-gradient(135deg, #ffcc00, #ff7b00);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Tabs (Iniciar Sesión / Registrarse) */
+#user-modal .tabs button {
+  padding: 10px 20px;
+  margin: 5px;
+  background: #eee;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Hover de los tabs */
+#user-modal .tabs button:hover {
+  background: #ff7b00;
+  color: #fff;
+}
+
+/* Input mejorado */
+#user-modal .form input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+#user-modal .form input:focus {
+  border-color: #ff7b00;
+  box-shadow: 0 0 8px rgba(255,123,0,0.4);
+}
+
+/* Todas las imágenes se escalan automáticamente */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Secciones con padding adaptable */
+section {
+  padding: 20px;
+}
+
+/* Menú normal en PC */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* En móviles: menú en columna */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    display: none; /* lo puedes mostrar con JS si quieres menú hamburguesa */
+  }
+
+  nav ul li {
+    padding: 10px 0;
+  }
+}
+ 
+/* Grid en PC */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* En tablets */
+@media (max-width: 1024px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* En celulares */
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Botón carrito flotante */
+#cart-icon {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  font-size: 28px;
+  padding: 10px;
+  border-radius: 50%;
+  background: #ff9800;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Carrito adaptado */
+#cart {
+  position: fixed;
+  right: 10px;
+  bottom: 70px;
+  background: #fff;
+  width: 300px;
+  max-width: 90%; /* que nunca se salga en móviles */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+h1, h2, h3, p {
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem); /* se ajusta al tamaño de pantalla */
+}
+
+/* Ajuste general de imágenes y secciones */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+section {
+  padding: clamp(20px, 5vw, 80px); /* padding adaptable */
+}
+
+/* Hero con texto centrado y escalable */
+.hero-content h1 {
+  font-size: clamp(2rem, 6vw, 5rem);
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+/* Grid de menú adaptable */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Nav responsive (hamburguesa en móvil) */
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    display: none;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+  nav ul.show {
+    display: flex;
+  }
+}
+
+/* Botón hamburguesa */
+#menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+}
+ /* MENÚ RESPONSIVO */
+#menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    display: none;
+    z-index: 1000;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  nav ul li {
+    padding: 10px 0;
+    text-align: center;
+  }
+}
